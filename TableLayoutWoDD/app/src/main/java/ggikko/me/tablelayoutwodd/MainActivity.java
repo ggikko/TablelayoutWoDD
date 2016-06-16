@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ggikko.me.tablelayoutwodd.custom.CustomHorizontalScrollView;
+import ggikko.me.tablelayoutwodd.event.ItemClickListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ItemClickListener {
 
     /** left & right list */
     @BindView(R.id.recycler_left) RecyclerView mRecycler_left;
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.title_header_list) CustomHorizontalScrollView title_header_list;
     @BindView(R.id.content_list) CustomHorizontalScrollView content_list;
 
+    /** dynamic + header  */
+    @BindView(R.id.right_title_header) LinearLayout right_title_header;
+
     /** arrow for direction */
     @BindView(R.id.arrow) ImageView arrow;
 
@@ -33,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-
-        
     }
 
     /** horizontal sync */

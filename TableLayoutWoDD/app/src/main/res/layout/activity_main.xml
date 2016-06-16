@@ -80,9 +80,6 @@
                     android:background="@color/white"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="1000dp"
-                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
