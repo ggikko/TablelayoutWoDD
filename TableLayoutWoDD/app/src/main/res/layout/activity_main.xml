@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ggikko.me.tablelayoutwodd.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/title_header"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <!-- header left section horizontal -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="90dp"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bottom_line" />
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="33dp"
+                android:background="@color/white">
+
+                <CheckBox
+                    android:id="@+id/title_header_left_checkbox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" />
+
+                <TextView
+                    android:id="@+id/title_header_left_text"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="money"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="90dp"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bottom_line" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/table_divider_header"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow_left"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <ggikko.me.tablelayoutwodd.custom.CustomHorizontalScrollView
+                android:id="@+id/title_header_list"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/right_title_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </ggikko.me.tablelayoutwodd.custom.CustomHorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/invest_list_header"
+                android:padding="10dp"
+                android:src="@drawable/btn_arrow_right" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bottom_line" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_header"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/content_header_text"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:text="투자 가능 채권"
+                android:textSize="11dp" />
+
+            <View
+                android:id="@+id/table_divider_header2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/header2_text0"
+                android:background="@drawable/shadow_left"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_left"
+                    android:layout_width="90dp"
+                    android:layout_height="1000dp" />
+
+                <View
+                    android:id="@+id/table_divider_content"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shadow_left"
+                    android:visibility="gone" />
+
+                <ggikko.me.tablelayoutwodd.custom.CustomHorizontalScrollView
+                    android:id="@+id/content_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_right"
+                            android:layout_width="1000dp"
+                            android:layout_height="1000dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </ggikko.me.tablelayoutwodd.custom.CustomHorizontalScrollView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/bottom_line" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
